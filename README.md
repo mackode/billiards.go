@@ -1,0 +1,2 @@
+# billiards.go
+Simple simulation
