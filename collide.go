@@ -48,7 +48,7 @@ func collide(ball1, ball2 *Ball) {
   ball2.Velo = ball2.Velo.Add(sepVelVec.Scale(-1))
 }
 
-func wellBounce(ball *Ball, width, height float32, radius float32) {
+func wallBounce(ball *Ball, width, height float32, radius float32) {
   b := pos2Vector(ball)
   var axis vector.Vector
   if b[0] <= float64(radius) || b[0] >= float64(width - radius) {

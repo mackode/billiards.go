@@ -18,7 +18,7 @@ func driveBall(ball *Ball) {
   pos := ball.Ava.Position()
   v := vector.Vector{float64(pos.X), float64(pos.Y)}
   newpos := v.Add(ball.Velo.Scale(1.5))
-  ball.Ava.Move(fyne.NewPos(float32(newpos[0]), float32(new pos[1])))
+  ball.Ava.Move(fyne.NewPos(float32(newpos[0]), float32(newpos[1])))
 }
 
 func shootBall(ball *Ball, to fyne.Position) {
@@ -35,7 +35,7 @@ func drawCircle(co color.RGBA, x, y, r float32) *canvas.Circle {
   return c
 }
 
-func drawRectangle(co color.RGBA, x, y, w, h, float32) *canvasRectangle {
+func drawRectangle(co color.RGBA, x, y, w, h float32) *canvas.Rectangle {
   r := canvas.NewRectangle(co)
   r.Move(fyne.NewPos(x, y))
   r.Resize(fyne.NewSize(w, h))

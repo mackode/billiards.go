@@ -34,7 +34,7 @@ func main() {
   con := container.NewWithoutLayout(objs...)
   w.SetContent(con)
 
-  w.Canvas().SetOnTypeKey(func(ev *fyne.KeyEvent) {
+  w.Canvas().SetOnTypedKey(func(ev *fyne.KeyEvent) {
     key := string(ev.Name)
     switch key {
       case "Q":

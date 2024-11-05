@@ -22,7 +22,7 @@ func NewTapRect(width, height float32, cb func(fyne.Position)) *TapRect {
 }
 
 func (t *TapRect) CreateRenderer() fyne.WidgetRenderer {
-  return widget.NewSampleRenderer(t.rect)
+  return widget.NewSimpleRenderer(t.rect)
 }
 
 func (t *TapRect) Tapped(ev *fyne.PointEvent) {
